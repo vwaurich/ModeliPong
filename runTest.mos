@@ -1,0 +1,7 @@
+loadModel(Modelica, {"3.2.1"}); getErrorString();
+loadModel(Modelica_DeviceDrivers); getErrorString();
+loadFile("ModeliPong.mo"); getErrorString();
+
+setDebugFlags("visxml");getErrorString();
+
+translateModelFMU(ModeliPong.Game_keyboard, version="2.0", fmuType="me"); getErrorString();
